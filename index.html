@@ -13,18 +13,17 @@
 <body>
   <div class="wrapper">
 
-    <nav>
-      <span id="brand">
-        <!-- <a href="index.html">F0oDONGA</a>-->
-        <a href="index.html"><img src="foodonga_logo.png" height="75px" width="150px"></a>
-      </span>
-
-      <ul id="menu">
-        <li><a href="index.html">Home<span>.</span></a></li>
-        <li><a href="work.html">Work<span>.</span></a></li>
-        <li><a href="about.html">About Me<span>.</span></a></li>
-        <li><a href="contact.html">Contact<span>.</span></a></li>
-      </ul>
+    <nav class="navbar">
+      <div class='max-width'>
+        <div class="logo">
+           <a href="#">Raj<span class='s'>'s</span> Portfolio</a>
+        </div>
+        <ul class="menu">
+         <li><a class=active href="#"> Home</a></li>
+         <li><a href="#"> Know Me</a></li>
+         <li><a href="#"> Contact</a></li>
+       </ul>
+     </div>
 
       <div id="toggle">
         <div class="span">Menu</div>
@@ -42,11 +41,7 @@
         <li><a href="contact.html">Contact<span>.</span></a></li>
       </ul>
     </div>
-    <div class="hero">
-      <div class="header">
-        <h1 class="line anim-typewriter">Beyond the boundaries of taste.</h1>
-      </div>
-    </div>
+   
     <section class="home">
       <div class="max-width">
         <div class="home-content">
@@ -181,6 +176,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type="text/javascript">
+    $(document).ready(function(){
+	$(window).scroll(function(){
+		if(this.scrollY > 20)
+		{
+			$('.navbar').addClass("sticky");
+		}else
+		{
+			$('.navbar').removeClass("sticky");
+		}
+	})
+});
+
+  </script>
+  <script type="text/javascript">
     $("#toggle").click(function () {
       $(this).toggleClass('on');
       $("#resize").toggleClass("active");
@@ -275,6 +284,8 @@
     };
 
   </script>
+
+  
 </body>
 
 </html>
