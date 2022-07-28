@@ -7,7 +7,7 @@
   <title>Food website</title>
   <link rel="stylesheet" href="style.css">
 
-  
+
 </head>
 
 <body>
@@ -48,33 +48,36 @@
       </div>
     </div>
     <section class="home">
-			<div class="max-width">	
-					<div class="home-content">	
-							<div class="text-1">Hello, It's </div>
-							<div class="text-2">Raj Kanani</div>
-							<div class="text-3">And I am a <span class="change" data-period="2000" data-type='[ "Software Engineer.", "Developer", "Part time Learner &#128512." ]'></span></div>
-					</div>	
-			</div>	
-		</section>
+      <div class="max-width">
+        <div class="home-content">
+          <div class="text-1">Hello, It's </div>
+          <div class="text-2">Raj Kanani</div>
+          <div class="text-3">And I am a <span class="change" data-period="2000"
+              data-type='[ "Software Engineer.", "Developer", "Part time Learner &#128512." ]'></span></div>
+              <div class="scroll-down"></div>
 
-    <div class="scroll-down"></div>
+        </div>
+      </div>
+    </section>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#1A2238" fill-opacity="1"
+        d="M0,192L120,170.7C240,149,480,107,720,101.3C960,96,1200,128,1320,144L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+      </path>
+    </svg>
+   
 
-    <div class="container-fluid" >
-      <br><br><br>
-
-      <h3>Select </h3>
-
+    <div class="container-fluid">
       <div class="hr">
         <div class="row"></div>
       </div>
       <br>
       <div class="btns" style="text-align:center;">
-        
+
         <a href="#transfer1"><button href="#transfer" class="btn btn-outline-dark">Italian</button></a>
         <a href="#transfer2"><button href="#transfer" class="btn btn-outline-dark">Chinese</button></a>
         <a href="#transfer3"><button href="#transfer" class="btn btn-outline-dark">Gujarati</button></a>
         <a href="#transfer4"><button href="#transfer" class="btn btn-outline-dark">South Indian</button></a>
-        
+
 
       </div>
       <br>
@@ -82,11 +85,11 @@
         <div class="row"></div>
       </div>
       <div class="whitespace" id="transfer1"></div>
-      
-      <div class="row">
-        <div class="col-lg-7" ></div>
 
-        <div class="col-lg-4 project project1 wow fadeInUp"  onclick="location.href='project1.html'"></div>
+      <div class="row">
+        <div class="col-lg-7"></div>
+
+        <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project1.html'"></div>
         <div class="col-lg-1"></div>
       </div>
 
@@ -178,17 +181,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type="text/javascript">
-    $("#toggle").click(function() {
+    $("#toggle").click(function () {
       $(this).toggleClass('on');
       $("#resize").toggleClass("active");
     });
 
-    $("#resize ul li a").click(function() {
+    $("#resize ul li a").click(function () {
       $(this).toggleClass('on');
       $("#resize").toggleClass("active");
     });
 
-    $(".close-btn").click(function() {
+    $(".close-btn").click(function () {
       $(this).toggleClass('on');
       $("#resize").toggleClass("active");
     });
@@ -212,66 +215,66 @@
   </script>
 
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
+    var TxtType = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
     };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+    TxtType.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
+      if (this.isDeleting) {
         this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
+      } else {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+      }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+      var that = this;
+      var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
+      if (this.isDeleting) { delta /= 2; }
 
-        if (!this.isDeleting && this.txt === fullTxt) {
+      if (!this.isDeleting && this.txt === fullTxt) {
         delta = this.period;
         this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
+      } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
         delta = 500;
-        }
+      }
 
-        setTimeout(function() {
+      setTimeout(function () {
         that.tick();
-        }, delta);
+      }, delta);
     };
 
-    window.onload = function() {
-        var elements = document.getElementsByClassName('change');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
+    window.onload = function () {
+      var elements = document.getElementsByClassName('change');
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
         }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".change > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".change > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
     };
 
-</script>
+  </script>
 </body>
 
 </html>

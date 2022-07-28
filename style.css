@@ -344,19 +344,20 @@ nav #menu li a:hover
 }
 .home
 {
-
+background-color: #1A2238;
 display: flex;
 background-image:url("C:/Users/kanan/Desktop/portfolio/image/keyboard1.JPG");
 background-repeat: no-repeat;
  background-size: cover;
-height: 100vh;
-min-height: 500px;
+height: 80vh;
+min-height: 400px;
+
 
 }
 
 .home .max-width
 {
-	margin :auto 0 auto 40px;
+	margin :auto 0 auto 100px;
 }
 .home .home-content .text-1
 {
@@ -376,7 +377,7 @@ min-height: 500px;
 }
 .home .home-content .text-3 .change
 {
-	color: #C3073F;
+	color: #FF6A3D;
 }
 
 
