@@ -1,3 +1,5 @@
+
+
 html
 {
      scroll-behavior: smooth;
@@ -14,7 +16,10 @@ body
     color: #fff !important;
     background: #0f0f0f !important;
 }
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .whitespace
 {
     width: 100%;
@@ -317,17 +322,11 @@ nav #menu li a:hover
     }
 }
 
-.hero
-{
-    display: flex;
+/* TypeWriter Effect start */
 
-    height: 100vh;
 
-    align-items: center;
-    justify-content: center;
-}
 
-.hero h1
+.home-content .text-3 .change
 {
     font-weight: lighter;
     line-height: 58px;
@@ -338,11 +337,48 @@ nav #menu li a:hover
 
 @media(max-width: 768px)
 {
-    .header h1
+    .home-content .text-3 .change
     {
         font-size: 26px;
     }
 }
+.home
+{
+
+display: flex;
+background-image:url("C:/Users/kanan/Desktop/portfolio/image/keyboard1.JPG");
+background-repeat: no-repeat;
+ background-size: cover;
+height: 100vh;
+min-height: 500px;
+
+}
+
+.home .max-width
+{
+	margin :auto 0 auto 40px;
+}
+.home .home-content .text-1
+{
+	font-size: 27px;
+}
+
+.home .home-content .text-2
+{
+	font-size: 75px;
+	font-weight: 600;
+	margin-left: -3;
+}
+.home .home-content .text-3
+{
+	font-size: 40px;
+	margin: 5px 0;
+}
+.home .home-content .text-3 .change
+{
+	color: #C3073F;
+}
+
 
 .scroll-down
 {
