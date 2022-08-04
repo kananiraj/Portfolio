@@ -564,10 +564,139 @@ h3
 
 .hr
 {
-    height: 1px;
+    height: 3px;
 
-    background: rgba(255, 255, 255, .2);
+    background: #0f0f0f;
 }
+
+.btns button, button::after {
+    width: 180px;
+    height: 66px;
+    font-size: 26px;
+    font-family: 'Bebas Neue', cursive;
+    background: linear-gradient(45deg, transparent 5%, #1A2238 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 88px;
+    box-shadow: 6px 0px 0px #FF6A3D;
+    outline: transparent;
+    position: relative;
+    margin-right: 20px;
+
+  }
+  
+  .btns button::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'AVAILABLE NOW';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #FF6A3D 3%, #FF6A3D 5%, #1A2238 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #FF6A3D;
+    clip-path: var(--slice-0);
+  }
+  
+  .btns button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+  
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  .know {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 50px 50px 50px;
+    
+  }
+  
+  
+  .know img {
+   
+    border-radius: 8px;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .know .text {
+    font-size: 10px;
+    padding-left: 20px;
+    color: #0f0f0f;
+    width: 50%;
+  }
+
+  .know .image {
+    flex-basis: 30%;
+    background-color:#E8E8E8;
+    padding: 20px;
+    width: 40%;
+  }
+  
+  .know .vl{
+    border-left: 3px solid black;
+    height: 400px;
+    padding-left: 10px;
+    padding-right: 20px;
+
+  }
+
+  
 
 .info h4
 {
@@ -579,7 +708,7 @@ h3
 {
     font-weight: lighter;
 
-    color: grey;
+    color: rgb(0, 0, 0);
 }
 
 .info li

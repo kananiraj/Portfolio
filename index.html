@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food website</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 
 </head>
@@ -16,14 +18,14 @@
     <nav class="navbar">
       <div class='max-width'>
         <div class="logo">
-           <a href="#">Raj<span class='s'>'s</span> Portfolio</a>
+          <a href="#">Raj<span class='s'>'s</span> Portfolio</a>
         </div>
         <ul class="menu">
-         <li><a class=active href="#"> Home</a></li>
-         <li><a href="#"> Know Me</a></li>
-         <li><a href="#"> Contact</a></li>
-       </ul>
-     </div>
+          <li><a class=active href="#"> Home</a></li>
+          <li><a href="#"> Know Me</a></li>
+          <li><a href="#"> Contact</a></li>
+        </ul>
+      </div>
 
       <div id="toggle">
         <div class="span">Menu</div>
@@ -41,7 +43,7 @@
         <li><a href="contact.html">Contact<span>.</span></a></li>
       </ul>
     </div>
-   
+
     <section class="home">
       <div class="max-width">
         <div class="home-content">
@@ -49,7 +51,7 @@
           <div class="text-2">Raj Kanani</div>
           <div class="text-3">And I'm a <span class="change" data-period="2000"
               data-type='[ "Software Engineer.", "Developer.", "Part time Learner &#128512." ]'></span></div>
-              <div class="scroll-down"></div>
+          <div class="scroll-down"></div>
 
         </div>
       </div>
@@ -59,7 +61,7 @@
         d="M0,192L120,170.7C240,149,480,107,720,101.3C960,96,1200,128,1320,144L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
       </path>
     </svg>
-   
+
 
     <div class="container-fluid">
       <div class="hr">
@@ -68,10 +70,10 @@
       <br>
       <div class="btns" style="text-align:center;">
 
-        <a href="#transfer1"><button href="#transfer" class="btn btn-outline-dark">Italian</button></a>
-        <a href="#transfer2"><button href="#transfer" class="btn btn-outline-dark">Chinese</button></a>
-        <a href="#transfer3"><button href="#transfer" class="btn btn-outline-dark">Gujarati</button></a>
-        <a href="#transfer4"><button href="#transfer" class="btn btn-outline-dark">South Indian</button></a>
+        <a href="#transfer1"><button href="#transfer" class="Knowme">Know Me</button></a>
+        <a href="#transfer2"><button href="#transfer" class="Education">Education</button></a>
+        <a href="#transfer3"><button href="#transfer" class="Experiance">Experiance</button></a>
+        <a href="#transfer4"><button href="#transfer" class="Projects">Projects</button></a>
 
 
       </div>
@@ -81,6 +83,25 @@
       </div>
       <div class="whitespace" id="transfer1"></div>
 
+    </div>
+    <h2 class="knowhead" style="text-align:center;color: black;font-size: 40px;  text-shadow: 2px 2px #FF6A3D;
+    ">Who I am ?</h2>
+
+    <div class="know">
+      <div class="text">
+        <h1>Detailed - oriented, responsible and committed engineer, with a skills such as get-it-done, on -time, problem solver and continuously focusing on improvement.
+
+          Have been familiar with a variety of programming languages and frameworks, including Java, Python, NLP, ML, CSS, HTML and databases such as SQL and firebase.
+          
+          As a learner, I would say that I have just stepped into real industry and journey is too far and a lot more things to absorb. Well, I am kind of a person who always tries to explore new things regardless of field; that is the thing which makes me more interesting.</h1>
+      </div>
+      <div class="vl"></div>
+      <div class="image">
+        <img src="D:\STUDY\Portfolio\PortFolio\Raj.jpg">
+      </div>
+    </div>
+
+    <div>
       <div class="row">
         <div class="col-lg-7"></div>
 
@@ -176,17 +197,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-	$(window).scroll(function(){
-		if(this.scrollY > 20)
-		{
-			$('.navbar').addClass("sticky");
-		}else
-		{
-			$('.navbar').removeClass("sticky");
-		}
-	})
-});
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if (this.scrollY > 20) {
+          $('.navbar').addClass("sticky");
+        } else {
+          $('.navbar').removeClass("sticky");
+        }
+      })
+    });
 
   </script>
   <script type="text/javascript">
@@ -285,7 +304,7 @@
 
   </script>
 
-  
+
 </body>
 
 </html>
