@@ -133,7 +133,6 @@ body .navbar .navbar-brand
     padding: 0px 40px 0px 0px;
 }
 
-.na
 
 #toggle
 {
@@ -633,50 +632,27 @@ h3
   }
 
 
-  .container img{
-
-    height: 400px;
-    width: 400px;
-
-  }
-
-  .know {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto 50px 50px 50px;
-    
-  }
   
-  
-  .know img {
-   
-    border-radius: 8px;
-    width: 400px;
-    height: 400px;
-  }
-  
-  .know .text {
-    font-size: 10px;
-    padding-left: 20px;
-    color: #0f0f0f;
-    width: 50%;
+
+  .container .row h3
+  {
+    justify-content: left;
   }
 
-  .know .image {
-    flex-basis: 30%;
-    background-color:#E8E8E8;
-    padding: 20px;
-    width: 40%;
-  }
-  
-  .know .vl{
-    border-left: 3px solid black;
-    height: 400px;
-    padding-left: 10px;
-    padding-right: 20px;
 
+
+  @keyframes wave {
+    0% {
+      transform: translate(-50%,-75%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%,-75%) rotate(360deg);
+    }
   }
+
+  
+
 
   
 
