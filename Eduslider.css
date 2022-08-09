@@ -15,7 +15,6 @@ html {
 .cd-horizontal-timeline {
   font-family: "Source Sans Pro", sans-serif;
   padding: 30px;
-  background-color: #fcfcfc;
 }
 .events-content h3
 {color: #000000;}
@@ -85,7 +84,7 @@ Main Components
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #000000;
+  background: #ffffff;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
@@ -147,7 +146,7 @@ Main Components
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  border: 2px solid #000000;
+  border: 2px solid #FF6A3D;
   background-color: #f8f8f8;
   -webkit-transition: background-color 0.3s, border-color 0.3s;
   -moz-transition: background-color 0.3s, border-color 0.3s;
