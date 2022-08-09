@@ -15,28 +15,21 @@ html {
 .cd-horizontal-timeline {
   font-family: "Source Sans Pro", sans-serif;
   padding: 30px;
-  background-color: #f8f8f8;
+  background-color: #fcfcfc;
 }
 .events-content h3
-{color: #383838;}
+{color: #000000;}
 
 .events-content em
-{color: #383838;}
+{color: #000000;}
 
 .cd-horizontal-timeline .timeline .events a {
-  color: #7b9d6f;
+  color: #FF6A3D;
   text-decoration: none;
   font-size: 17px;
   margin-top: 10px;
 }
 
-.wave-container {
-  position: relative;
-  background: #09F;
-  color: #FFF;
-  text-align: center;
-  overflow: hidden;
-}
 /* -------------------------------- 
 
 Main Components 
@@ -83,16 +76,7 @@ Main Components
   height: 100%;
   width: 20px;
 }
-.cd-horizontal-timeline .events-wrapper::before {
-  left: 0;
-  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
-}
-.cd-horizontal-timeline .events-wrapper::after {
-  right: 0;
-  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
-}
+
 .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */
   position: absolute;
@@ -101,7 +85,7 @@ Main Components
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #dfdfdf;
+  background: #000000;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
@@ -114,7 +98,7 @@ Main Components
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #7b9d6f;
+  background-color: #FF6A3D;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -136,7 +120,7 @@ Main Components
   text-align: center;
   font-size: 1.3rem;
   padding-bottom: 15px;
-  color: #383838;
+  color: #000000;
   /* fix bug on Safari - text flickering while timeline translates */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -163,25 +147,25 @@ Main Components
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  border: 2px solid #dfdfdf;
+  border: 2px solid #000000;
   background-color: #f8f8f8;
   -webkit-transition: background-color 0.3s, border-color 0.3s;
   -moz-transition: background-color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, border-color 0.3s;
 }
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #FF6A3D;
+  border-color: #FF6A3D;
 }
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
 }
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #FF6A3D;
+  border-color: #FF6A3D;
 }
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #7b9d6f;
+  border-color: #FF6A3D;
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
@@ -207,7 +191,7 @@ Main Components
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  border: 2px solid #dfdfdf;
+  border: 2px solid #FF6A3D;
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
