@@ -131,6 +131,11 @@ Main Components
 {
   margin: 40px;
 }
+
+.cd-horizontal-timeline .events-content ol p
+{
+  text-colo: #000000;
+}
 .cd-horizontal-timeline .events a::after {
   /* this is used to create the event spot */
   content: '';
@@ -410,3 +415,4 @@ Main Components
     transform: translateX(0%);
   }
 }
+
