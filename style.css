@@ -674,7 +674,8 @@ h3
 
     color: #000000;
 }
-
+.info h4{    color: #000000;
+}
 #fb::before
 {
     display: inline-block;
